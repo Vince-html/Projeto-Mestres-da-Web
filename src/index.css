@@ -1,13 +1,36 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'AxiForma Bold';
+  src: local('AxiForma Bold'), url('./assets/fonts/AxiformaBold.otf') format('opentype');
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'MarvelRegular';
+  src: local('MarvelRegular'), url('./assets/fonts/MarvelRegular.ttf') format('truetype');
+
 }
+
+@font-face {
+  font-family: 'AxiForma Regular';
+  src: local('AxiForma Regular'), url('./assets/fonts/KastelovAxiformaRegular.otf') format('opentype');
+
+}
+
+@font-face {
+  font-family: 'AxiForma Light';
+  src: local('AxiForma Light'), url('./assets/fonts/Kastelov\ -\ Axiforma\ Light.otf') format('opentype');
+
+}
+
+@font-face {
+  font-family: 'AxiForma Medium';
+  src: local('AxiForma Medium'), url('./assets/fonts/Kastelov\ -\ Axiforma\ Medium.otf') format('opentype');
+
+}
+
+@font-face {
+  font-family: 'AxiForma Thin';
+  src: local('AxiForma Thin'), url('./assets/fonts/Kastelov\ -\ Axiforma\ Thin.otf') format('opentype');
+
+}
+
