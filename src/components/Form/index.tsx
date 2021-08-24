@@ -19,9 +19,10 @@ const Form = () => {
   const handleLogin = async () => {
     try {
       // await dispatch(login(form));
-      history.push('/');
+      history.push('/home');
     } catch (err) {
-      err.response?.data?.message || err.message, 'error';
+      history.push('/');
+      // err.response?.data?.message || err.message, 'error';
     }
   };
 

@@ -22,7 +22,8 @@ export const Image = styled.img`
 export const Card = styled.div`
   ${({ theme }) => css`
     position: absolute;
-    height: 23rem;
+    width: 100%;
+    height: 25rem;
     border-radius: 3rem;
     padding: 2rem;
     background-color: #ff0000;

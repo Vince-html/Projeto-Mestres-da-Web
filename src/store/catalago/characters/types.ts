@@ -4,10 +4,14 @@ export enum CharactersTypes {
   LOAD_ERROR = '@characters/LOAD_ERROR',
 }
 
+export interface image {
+  path: string;
+}
+
 export interface Characters {
   id: number;
   name: string;
-  tumbnail: string;
+  thumbnail: image;
   description: string;
 }
 

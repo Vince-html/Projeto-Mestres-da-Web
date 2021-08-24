@@ -1,19 +1,34 @@
 import * as S from './style';
-import Fundo from '../../assets/img/fundo.png';
 
-const Card = () => {
+export type image = {
+  path: string;
+};
+
+type CharacterProps = {
+  id: number;
+  name: string;
+  thumbnail: image;
+  description: string;
+  key: number;
+};
+//   { character }: CharacterProps
+
+const Card = ({ ...props }: CharacterProps) => {
+  const Img = props.thumbnail.path;
+  const imgVariant = '/portrait_incredible';
+  const extension = '.jpg';
+
+  const imageResult = `${Img}${imgVariant}${extension}`;
+
+  console.log(imageResult);
   return (
     <S.Container>
-      <S.Card>
-        <h3>Wanda</h3>
-        <p>
-          Wanda Maximoff foi sequestrada da Sérvia e trazida para a Montanha
-          Wundagore, base do Alto Evolucionário. Durante anos, ela e seu irmão
-          gêmeo, Pietro, acreditavam que eram filhos de um casal de ciganos.
-        </p>
+      <S.Card key={props.id}>
+        <h3>{props.name}</h3>
+        <p>{props.description}</p>
         <a href="/">ver detalhes</a>
       </S.Card>
-      <S.Image src={Fundo} />
+      <S.Image src={imageResult} />
     </S.Container>
   );
 };
