@@ -3,17 +3,16 @@ import Card from '../../components/Card';
 import Header from '../../components/Header';
 import Section from '../../components/Section';
 import { useSelector } from 'react-redux';
+import FilmsResult from '../../store/catalago/films/selectors';
 
-import CharResult from '../../store/catalago/characters/selectors';
-
-function Home() {
-  const characters = useSelector(CharResult);
-  console.log(characters);
+function Films() {
+  const films = useSelector(FilmsResult);
+  console.log(films);
   return (
     <Background>
       <Header />
       <Section>
-        {characters.characters.map((character) => {
+        {films.films.map((character) => {
           return <Card key={character.id} {...character} />;
         })}
       </Section>
@@ -21,4 +20,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Films;

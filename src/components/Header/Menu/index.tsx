@@ -1,16 +1,17 @@
+import { Link } from 'react-router-dom';
 import * as S from './style';
 
 const Menu = () => {
   return (
     <S.Ul>
       <S.Li>
-        <a href="/">Personagens</a>
+        <Link to="/home">Personagens</Link>
       </S.Li>
       <S.Li>
-        <a href="/">Filmes</a>
+        <Link to="/films">Filmes</Link>
       </S.Li>
       <S.Li>
-        <a href="/">HQs</a>
+        <Link to="/hqs">HQs</Link>
       </S.Li>
       <S.Li>
         <a href="/">Sair</a>

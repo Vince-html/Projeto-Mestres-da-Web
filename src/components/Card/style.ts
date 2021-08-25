@@ -23,7 +23,7 @@ export const Card = styled.div`
   ${({ theme }) => css`
     position: absolute;
     width: 100%;
-    height: 25rem;
+    min-height: 10rem;
     border-radius: 3rem;
     padding: 2rem;
     background-color: #ff0000;

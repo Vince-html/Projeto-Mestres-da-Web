@@ -16,11 +16,11 @@ function createHash(timeStamp: string) {
   return hashedMessage;
 }
 
-export function* load() {
+export function* filmLoad() {
   try {
     const response = yield call(
       api.get,
-      `characters?&ts=${timeStamp}&apikey=${publicKey}&hash=${hash}&limit=3&`,
+      `series?&ts=${timeStamp}&apikey=${publicKey}&hash=${hash}&limit=3&`,
     );
 
     yield put(loadSuccess(response.data.data.results));

@@ -7,3 +7,6 @@ export const loadSuccess = (data: Characters[]) =>
   action(CharactersTypes.LOAD_SUCCESS, { data });
 
 export const loadError = () => action(CharactersTypes.LOAD_ERROR);
+
+export const GetCharacter = (data: Characters[]) =>
+  action(CharactersTypes.GET_CHARACTER, { data });

@@ -3,22 +3,21 @@ import Card from '../../components/Card';
 import Header from '../../components/Header';
 import Section from '../../components/Section';
 import { useSelector } from 'react-redux';
+import HqsResult from '../../store/catalago/hqs/selectors';
 
-import CharResult from '../../store/catalago/characters/selectors';
-
-function Home() {
-  const characters = useSelector(CharResult);
-  console.log(characters);
+function Hqs() {
+  const hqs = useSelector(HqsResult);
+  console.log(hqs);
   return (
     <Background>
       <Header />
       <Section>
-        {characters.characters.map((character) => {
-          return <Card key={character.id} {...character} />;
+        {hqs.hqs.map((hq) => {
+          return <Card key={hq.id} {...hq} />;
         })}
       </Section>
     </Background>
   );
 }
 
-export default Home;
+export default Hqs;

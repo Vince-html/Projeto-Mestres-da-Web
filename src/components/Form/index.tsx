@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
-
 import { useHistory } from 'react-router-dom';
+import { firebase, auth } from '../../services/firebase';
 import Button from './Button';
 
 import Input from './Input';
@@ -11,52 +10,22 @@ const Form = () => {
   const history = useHistory();
   // const dispatch = useDispatch();
 
-  const [form, setForm] = useState({
-    user: '',
-    pass: '',
-  });
-
   const handleLogin = async () => {
     try {
       // await dispatch(login(form));
       history.push('/home');
     } catch (err) {
-      history.push('/');
+      history.push('/home');
       // err.response?.data?.message || err.message, 'error';
     }
   };
-
-  const handleInputChange = (e) => {
-    e.preventDefault();
-    const { value, name } = e.target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
-  useEffect(() => {
-    console.log(form);
-  }, [form]);
 
   return (
     <S.Form action="" onSubmit={handleLogin}>
       <h2>Bem-Vindo(a) de volta!</h2>
       <p>Acesse sua conta:</p>
-      <Input
-        name="user"
-        type="text"
-        placeholder="Usuário"
-        onChange={handleInputChange}
-        value={form.user}
-      />
-      <Input
-        name="pass"
-        type="text"
-        placeholder="Senha"
-        onChange={handleInputChange}
-        value={form.pass}
-      />
+      <Input name="user" type="text" placeholder="Usuário" />
+      <Input name="pass" type="text" placeholder="Senha" />
       <S.MidSection>
         <div>
           <Input name="Login" type="checkbox" />

@@ -4,23 +4,21 @@ export type image = {
   path: string;
 };
 
-type CharacterProps = {
+type Props = {
   id: number;
   name: string;
   thumbnail: image;
   description: string;
   key: number;
 };
-//   { character }: CharacterProps
 
-const Card = ({ ...props }: CharacterProps) => {
+const Card = ({ ...props }: Props) => {
   const Img = props.thumbnail.path;
   const imgVariant = '/portrait_incredible';
   const extension = '.jpg';
 
   const imageResult = `${Img}${imgVariant}${extension}`;
 
-  console.log(imageResult);
   return (
     <S.Container>
       <S.Card key={props.id}>
